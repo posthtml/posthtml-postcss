@@ -1,0 +1,8 @@
+node_modules/
+test/
+coverage/
+npm-debug.log
+.editorconfig
+.jscsrc
+.jshintignore
+.jshintrc

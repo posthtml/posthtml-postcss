@@ -1,0 +1,50 @@
+{
+  "name": "posthtml-postcss",
+  "version": "0.0.0",
+  "description": "PostHTML-PostCSS plugin. Use PostCSS in HTML doc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && npm run coverage",
+    "lint": "jshint . && jscs -v .",
+    "coverage": "istanbul cover --report text --report html --report lcov node_modules/mocha/bin/_mocha",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags && rm -rf coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/posthtml/posthtml-postcss.git"
+  },
+  "keywords": [
+    "posthtml",
+    "postcss",
+    "plugin",
+    "html",
+    "xml",
+    "css",
+    "processor",
+    "htmlnext",
+    "transforming",
+    "transform",
+    "manipulation",
+    "preprocessor",
+    "parser"
+  ],
+  "author": "Ivan Voischev <voischev.ivan@ya.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/posthtml/posthtml-postcss/issues"
+  },
+  "homepage": "https://github.com/posthtml/posthtml-postcss#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.1.1",
+    "chai": "^3.3.0",
+    "istanbul": "^0.4.0",
+    "jscs": "^2.3.5",
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.3",
+    "posthtml": "^0.7.0"
+  },
+  "dependencies": {
+    "postcss": "^5.0.12"
+  }
+}
