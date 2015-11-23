@@ -1,7 +1,9 @@
-# posthtml-postcss plugin
+# PostHTML-PostCSS
 [![npm version](https://badge.fury.io/js/posthtml-postcss.svg)](http://badge.fury.io/js/posthtml-postcss)
+[![Build Status](https://travis-ci.org/posthtml/posthtml-postcss.svg?branch=master)](https://travis-ci.org/posthtml/posthtml-postcss?branch=master)
+[![Coverage Status](https://coveralls.io/repos/posthtml/posthtml-postcss/badge.svg?branch=master)](https://coveralls.io/r/posthtml/posthtml-postcss?branch=master)
 
-Use PostCSS in HTML document
+[PostHTML](https://github.com/posthtml/posthtml/) plugin for PostCSS. Use PostCSS in HTML document
 
 ## Usage
 ```javascript
