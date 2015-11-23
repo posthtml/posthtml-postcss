@@ -1,12 +1,12 @@
 # posthtml-postcss plugin
 [![npm version](https://badge.fury.io/js/posthtml-postcss.svg)](http://badge.fury.io/js/posthtml-postcss)
 
-Use PostCSS in HTML
+Use PostCSS in HTML document
 
 ## Usage
 ```javascript
 var posthtml = require('posthtml'),
-    html = '<html><head><style>a { display: flex; }</style></head><body><a style="border-radius: 5px;" href="#">Text</a></body></html>',
+    html = '<style>div { display: flex; }</style><div style="display: flex;">Text</div>',
     postcssPlugins = [require('autoprefixer')({ browsers: ['last 2 versions'] })],
     postcssOptions = {};
 
@@ -15,7 +15,7 @@ posthtml()
     .process(html)
     .then(function(result) {
         console.log(result.html);
-        // <span class="my-component"><span class="my-text text">Text</span></span>
+        // <style>div { display: -webkit-flex;display: -ms-flexbox;display: flex; }</style><div style="display: -webkit-flex;display: -ms-flexbox;display: flex;">Text</div>
     })
 ```
 

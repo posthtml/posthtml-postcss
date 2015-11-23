@@ -14,7 +14,6 @@
     "disallowMultipleLineBreaks": true,
     "disallowTrailingComma": true,
     "disallowTrailingWhitespace": true,
-    "disallowNamedUnassignedFunctions": true,
     "disallowSpacesInFunctionDeclaration": {
         "beforeOpeningRoundBrace": true
     },

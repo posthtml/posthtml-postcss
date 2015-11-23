@@ -1,7 +1,7 @@
 {
   "name": "posthtml-postcss",
   "version": "0.0.0",
-  "description": "PostHTML-PostCSS plugin. Use PostCSS in HTML doc.",
+  "description": "PostHTML-PostCSS plugin. Use PostCSS in HTML document.",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && npm run coverage",
