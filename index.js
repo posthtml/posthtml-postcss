@@ -3,15 +3,15 @@ module.exports = function(plugins, options) {
     plugins = [].concat(plugins);
     options = options || {};
 
-    var processor = postcss(plugins);
+    var css = postcss(plugins);
 
     return function posthtmlPostcss(tree) {
-        tree.walk( function(node) {
-            if (node.tag && node.tag === 'style' && node.content) {
-                node.content = [processor.process([].concat(node.content).join(''), options).css];
+        tree.walk(function(node) {
+            if (node.tag === 'style' && node.content) {
+                node.content = [css.process([].concat(node.content).join(''), options).css];
             }
             if (node.attrs && node.attrs.style) {
-                node.attrs.style = processor.process(node.attrs.style, options).css;
+                node.attrs.style = css.process(node.attrs.style, options).css;
             }
             return node;
         });
