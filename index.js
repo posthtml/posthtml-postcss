@@ -7,6 +7,8 @@ function indentResolve(str, options) {
             return str;
         }
 
+        options.lastLine = str.substr(str.lastIndexOf('\n') + 1);
+        str = str.substr(0, str.lastIndexOf('\n') + 1);
         options.length = Math.min.apply(Math, str.match(/\n(?!\n)\s*/g).filter(function(space) {
             return space.length > 2;
         }).map(function(space) {
@@ -17,8 +19,8 @@ function indentResolve(str, options) {
         str = str.replace(new RegExp(options.match,'g'), '');
     } else {
         str = str.replace(/\n/g, '\n' + options.match);
+        str = str.substr(0, str.lastIndexOf('\n') + 1) + options.lastLine;
     }
-
     return str;
 }
 
@@ -36,7 +38,8 @@ module.exports = function(plugins, options) {
                 indent = {
                 type: 'space',
                 length: undefined,
-                match: ''
+                match: '',
+                lastLine: ''
             };
 
             if (node.tag === 'style' && node.content) {
