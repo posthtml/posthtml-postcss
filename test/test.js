@@ -33,7 +33,7 @@ describe('use postcss', function() {
 
     it('style attrs', function(done) {
         var html = '<div style="display: flex;"></div>';
-        var expected = '<div style="display: -webkit-flex;display: -ms-flexbox;display: flex;"></div>';
+        var expected = '<div style="display: -ms-flexbox;display: flex;"></div>';
         test(html, expected, {}, done);
     });
 
