@@ -36,7 +36,6 @@ module.exports = function(plugins, options) {
         tree.walk(function(node) {
             var promise,
                 indent = {
-                type: 'space',
                 length: undefined,
                 match: '',
                 lastLine: ''
