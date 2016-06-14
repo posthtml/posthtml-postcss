@@ -1,6 +1,6 @@
 {
   "name": "posthtml-postcss",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "PostHTML-PostCSS plugin. Use PostCSS in HTML document.",
   "main": "index.js",
   "scripts": {
