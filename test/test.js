@@ -21,7 +21,7 @@ describe('use postcss', function() {
 
     it('style tag', function(done) {
         var html = '<style>a {display: flex;}</style>';
-        var expected = '<style>a {display: -webkit-flex;display: -ms-flexbox;display: flex;}</style>';
+        var expected = '<style>a {display: -ms-flexbox;display: flex;}</style>';
         test(html, expected, {}, done);
     });
 
@@ -33,7 +33,7 @@ describe('use postcss', function() {
 
     it('style attrs', function(done) {
         var html = '<div style="display: flex;"></div>';
-        var expected = '<div style="display: -webkit-flex;display: -ms-flexbox;display: flex;"></div>';
+        var expected = '<div style="display: -ms-flexbox;display: flex;"></div>';
         test(html, expected, {}, done);
     });
 
