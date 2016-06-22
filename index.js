@@ -15,6 +15,10 @@ function indentResolve(str, options) {
             return space.length;
         }));
 
+        if (options.length === Infinity) {
+            return str;
+        }
+
         options.match = new Array(options.length).join(' ');
         str = str.replace(new RegExp(options.match,'g'), '');
     } else {
