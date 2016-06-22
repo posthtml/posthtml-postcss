@@ -48,4 +48,10 @@ describe('use postcss', function() {
         var expected = 'text <div></div>';
         test(html, expected, {}, done);
     });
+
+    it('style tag with newline and not indent', function(done) {
+        var html = 'text <style>\n.test { color: red; }</style>';
+        var expected = 'text <style>\n.test { color: red; }</style>';
+        test(html, expected, {}, done);
+    });
 });
