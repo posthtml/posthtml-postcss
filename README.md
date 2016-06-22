@@ -1,5 +1,5 @@
 # PostHTML-PostCSS
-[![npm version](https://img.shields.io/npm/v/posthtml-postcss.svg)](https://www.npmjs.com/package/posthtml-postcss)
+[![npm version](https://badge.fury.io/js/posthtml-postcss.svg)](https://badge.fury.io/js/posthtml-postcss)
 [![Build Status](https://travis-ci.org/posthtml/posthtml-postcss.svg?branch=master)](https://travis-ci.org/posthtml/posthtml-postcss?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/posthtml/posthtml-postcss/badge.svg?branch=master)](https://coveralls.io/github/posthtml/posthtml-postcss?branch=master)
 
