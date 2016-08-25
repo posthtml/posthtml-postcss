@@ -54,4 +54,11 @@ describe('use postcss', function() {
         var expected = 'text <style>\n.test { color: red; }</style>';
         test(html, expected, {}, done);
     });
+
+    // Angular edge cases
+    it('style attrs angular', function(done) {
+        var html = '<div style="width: {{mywidth}}"></div>';
+        var expected = '<div style="width: {{mywidth}}"></div>';
+        test(html, expected, {}, done);
+    });
 });

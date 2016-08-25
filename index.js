@@ -56,10 +56,24 @@ module.exports = function(plugins, options) {
             }
 
             if (node.attrs && node.attrs.style) {
-                promise = css.process(node.attrs.style, options)
-                    .then(function(result) {
-                        node.attrs.style = result.css;
+                promise = new Promise(function(resolve, reject) {
+
+                    // First create a postcss promise
+                    var thisPromise = css.process(node.attrs.style, options)
+                        .then(function(result) {
+                            node.attrs.style = result.css;
+                        });
+                        
+                    thisPromise.then(function(res) {
+                        resolve(res);
+                    }, function(error) {
+                       if (error.name === 'CssSyntaxError' && error.reason === 'Unknown word') {
+                            resolve();
+                       } else {
+                            reject(error);
+                       }
                     });
+                });
 
                 promises.push(promise);
             }
@@ -69,6 +83,8 @@ module.exports = function(plugins, options) {
 
         return Promise.all(promises).then(function() {
             return tree;
+        }, function(errors) {
+            throw new Error(errors);
         });
     };
 };
