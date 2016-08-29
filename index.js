@@ -2,14 +2,16 @@
 var postcss = require('postcss');
 
 function indentResolve(str, options) {
-    if (options.length === undefined) {
-        if (str.match(/\n(?!\n)\s*/g) === null) {
-            return str;
-        }
+    var strLastIndexOf = str.lastIndexOf('\n');
 
-        options.lastLine = str.substr(str.lastIndexOf('\n') + 1);
-        str = str.substr(0, str.lastIndexOf('\n') + 1);
-        options.length = Math.min.apply(Math, str.match(/\n(?!\n)\s*/g).filter(function(space) {
+    if (str.match(/\n(?!\n)\s*/g) === null) {
+        return str;
+    }
+
+    if (options.length === undefined) {
+        options.lastLine = str.substr(strLastIndexOf + 1);
+        var newStr = str.substr(0, strLastIndexOf + 1);
+        options.length = Math.min.apply(Math, newStr.match(/\n(?!\n)\s*/g).filter(function(space) {
             return space.length > 2;
         }).map(function(space) {
             return space.length;
@@ -23,7 +25,7 @@ function indentResolve(str, options) {
         str = str.replace(new RegExp(options.match,'g'), '');
     } else {
         str = str.replace(/\n/g, '\n' + options.match);
-        str = str.substr(0, str.lastIndexOf('\n') + 1) + options.lastLine;
+        str = str.substr(0, strLastIndexOf + 1) + options.lastLine;
     }
     return str;
 }
