@@ -56,6 +56,12 @@ describe('use postcss', function() {
         test(html, expected, {}, null, done);
     });
 
+    it('style tag with newline and multyply indent', function(done) {
+        var html = 'text <style>\n    .test {\n    color: red;\n}</style>';
+        var expected = 'text <style>\n    .test {\n    color: red;\n}</style>';
+        test(html, expected, {}, null, done);
+    });
+
     it('style tag with newline and indent', function(done) {
         var html = 'text <style>\n    .test { color: red; }</style>';
         var expected = 'text <style>\n    .test { color: red; }</style>';
