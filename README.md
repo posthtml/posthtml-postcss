@@ -26,10 +26,11 @@ const postcss = require('posthtml-postcss')
 
 const postcssPlugins = []
 const postcssOptions = {}
+const filterType = /^text\/css$/
 
 const html = readFileSync('./index.html', 'utf8')
 
-posthtml([ postcss(postcssPlugins, postcssOptions) ])
+posthtml([ postcss(postcssPlugins, postcssOptions, filterType) ])
     .process(html)
     .then((result) => console.log(result.html))
 ```
@@ -44,6 +45,7 @@ const postcssPlugins = [
   require('autoprefixer')({ browsers: ['last 2 versions'] })
 ]
 const postcssOptions = {}
+const filterType = /^text\/css$/
 
 const html = `
   <style>div { display: flex; }</style>
