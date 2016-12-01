@@ -49,7 +49,7 @@ module.exports = function(plugins, options) {
                 var styles = indentResolve([].concat(node.content).join(''), indent);
                 promise = css.process(styles, options)
                     .then(function(result) {
-                        node.content = indentResolve(result.css, indent);
+                        node.content = [indentResolve(result.css, indent)];
                     });
 
                 promises.push(promise);
