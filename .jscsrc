@@ -20,10 +20,6 @@
     "disallowSpacesInFunctionExpression": {
         "beforeOpeningRoundBrace": true
     },
-    "disallowSpacesInConditionalExpression": {
-        "afterTest": true,
-        "afterConsequent": true
-    },
     "requireSpaceBeforeBlockStatements": 1,
     "requireSpaceAfterKeywords": [
         "do",
