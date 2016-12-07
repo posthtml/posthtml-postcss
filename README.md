@@ -52,7 +52,7 @@ const html = `
   <div style="display: flex;">Text</div>
 `
 
-posthtml([ postcss(postcssPlugins, postcssOptions) ])
+posthtml([ postcss(postcssPlugins, postcssOptions, filterType) ])
     .process(html)
     .then((result) => console.log(result.html))
 ```
