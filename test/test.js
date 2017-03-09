@@ -122,4 +122,11 @@ describe('use postcss', function() {
 
         test(html, expected, {}, null, [plugin], done);
     });
+
+    // Angular edge cases
+    it('style attrs angular', function(done) {
+        var html = '<div style="width: {{mywidth}}"></div>';
+        var expected = '<div style="width: {{mywidth}}"></div>';
+        test(html, expected, {}, done);
+    });
 });
