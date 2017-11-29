@@ -28,7 +28,7 @@ function indentResolve (str, options) {
 }
 
 module.exports = function (plugins, options, filterType) {
-  plugins = [].concat(plugins)
+  plugins = [].concat(plugins).filter(plugin => typeof plugin === 'function')
   options = options || {}
 
   var css = postcss(plugins)
