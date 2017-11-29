@@ -6,7 +6,7 @@
   "files": "index.js",
   "scripts": {
     "test": "npm run lint && npm run coverage",
-    "lint": "jshint . && jscs .",
+    "lint": "eslint index.js",
     "coverage": "istanbul cover --report text --report html --report lcov node_modules/mocha/bin/_mocha",
     "preversion": "npm test",
     "postversion": "git push && git push --tags && rm -rf coverage"
@@ -39,13 +39,25 @@
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "chai": "^4.1.2",
+    "eslint": "^4.12.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "istanbul": "^0.4.0",
-    "jscs": "^3.0.7",
-    "jshint": "^2.8.0",
     "mocha": "^4.0.1",
     "posthtml": "^0.10.1"
   },
   "dependencies": {
     "postcss": "^6.0.14"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "standard"
+    ],
+    "extends": [
+      "standard"
+    ]
   }
 }
