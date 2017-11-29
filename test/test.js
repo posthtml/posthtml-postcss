@@ -15,6 +15,10 @@ function test (html, expected, postcssOptions, typeFilter, plugins, done) {
 }
 
 describe('use postcss', function () {
+  it('object options', function () {
+    expect(function () { posthtml([css({})]) }).to.not.throw(Error)
+  })
+
   it('options', function () {
     expect(function () { posthtml([css([])]) }).to.not.throw(Error)
   })
