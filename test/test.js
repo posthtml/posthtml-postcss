@@ -4,7 +4,7 @@ var css = require('..');
 var expect = require('chai').expect;
 
 function test(html, expected, postcssOptions, typeFilter, plugins, done) {
-    plugins = plugins || [require('autoprefixer')({ browsers: ['last 2 versions'] })];
+    plugins = plugins || [require('autoprefixer')({ browsers: ['ie >= 10'] })];
     expect(posthtml([css(plugins, postcssOptions, typeFilter)])
         .process(html)
         .then(function(result) {

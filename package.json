@@ -6,7 +6,7 @@
   "files": "index.js",
   "scripts": {
     "test": "npm run lint && npm run coverage",
-    "lint": "jshint . && jscs -v .",
+    "lint": "jshint . && jscs .",
     "coverage": "istanbul cover --report text --report html --report lcov node_modules/mocha/bin/_mocha",
     "preversion": "npm test",
     "postversion": "git push && git push --tags && rm -rf coverage"
@@ -37,15 +37,15 @@
   },
   "homepage": "https://github.com/posthtml/posthtml-postcss#readme",
   "devDependencies": {
-    "autoprefixer": "^6.1.1",
-    "chai": "^3.3.0",
+    "autoprefixer": "^7.1.6",
+    "chai": "^4.1.2",
     "istanbul": "^0.4.0",
-    "jscs": "^2.3.5",
+    "jscs": "^3.0.7",
     "jshint": "^2.8.0",
-    "mocha": "^2.3.3",
-    "posthtml": "^0.7.0"
+    "mocha": "^4.0.1",
+    "posthtml": "^0.10.1"
   },
   "dependencies": {
-    "postcss": "^5.0.12"
+    "postcss": "^6.0.14"
   }
 }
