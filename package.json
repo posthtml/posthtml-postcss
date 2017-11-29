@@ -46,6 +46,6 @@
     "posthtml": "^0.10.1"
   },
   "dependencies": {
-    "postcss": "^5.0.12"
+    "postcss": "^6.0.14"
   }
 }
