@@ -6,7 +6,7 @@
   "files": "index.js",
   "scripts": {
     "test": "npm run lint && npm run coverage",
-    "lint": "jshint . && jscs -v .",
+    "lint": "jshint . && jscs .",
     "coverage": "istanbul cover --report text --report html --report lcov node_modules/mocha/bin/_mocha",
     "preversion": "npm test",
     "postversion": "git push && git push --tags && rm -rf coverage"
