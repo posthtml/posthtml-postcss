@@ -6,7 +6,7 @@
   "files": "index.js",
   "scripts": {
     "test": "npm run lint && npm run coverage",
-    "lint": "eslint index.js",
+    "lint": "eslint {test/*,*}.js",
     "coverage": "istanbul cover --report text --report html --report lcov node_modules/mocha/bin/_mocha",
     "preversion": "npm test",
     "postversion": "git push && git push --tags && rm -rf coverage"
@@ -53,6 +53,10 @@
     "postcss": "^6.0.14"
   },
   "eslintConfig": {
+    "env": {
+      "node": true,
+      "mocha": true
+    },
     "plugins": [
       "standard"
     ],
