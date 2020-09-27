@@ -1,12 +1,12 @@
 var posthtml = require('posthtml')
 var css = require('..')
 var expect = require('chai').expect
+var autoprefixer = require('autoprefixer')({ overrideBrowserslist: ['ie >= 10'] })
 
 function test (html, expected, postcssOptions, typeFilter, plugins, done) {
-  Object.assign(postcssOptions, { from: undefined })
-  plugins = plugins || [require('autoprefixer')({ overrideBrowserslist: ['ie >= 10'] })]
+  plugins = plugins || [autoprefixer]
   expect(posthtml([css(plugins, postcssOptions, typeFilter)])
-    .process(html)
+    .process(html, { from: 'test/test.js' })
     .then(function (result) {
       expect(expected).to.eql(result.html)
       done()
@@ -125,5 +125,20 @@ describe('use postcss', function () {
     }
 
     test(html, expected, {}, null, [plugin], done)
+  })
+
+  it('includes the file name in the syntax error', function (done) {
+    var html = '<style>.test { color: red</style>'
+
+    posthtml([css([autoprefixer])])
+      .process(html, { from: 'test/test.js' })
+      .catch(function (error) {
+        expect(error.message).to.include('test/test.js')
+        done()
+      })
+  })
+
+  it('throws if PostCSS configuration is not found', function () {
+    expect(function () { posthtml([css()]) }).to.throw(Error)
   })
 })

@@ -1,6 +1,13 @@
 var postcss = require('postcss')
+var postcssrc = require('postcss-load-config')
 
 module.exports = function (plugins, options, filterType) {
+  if (arguments.length === 0) {
+    var rc = postcssrc.sync()
+    plugins = rc.plugins
+    options = rc.options
+  }
+
   plugins = [].concat(plugins).filter(plugin => typeof plugin === 'function')
   options = options || {}
 
@@ -24,7 +31,8 @@ module.exports = function (plugins, options, filterType) {
 
         if (meetsFilter) {
           var styles = [].concat(node.content).join('')
-          promise = css.process(styles, options)
+          var from = options.from || tree.options.from
+          promise = css.process(styles, Object.assign({}, options, { from: from }))
             .then(function (result) {
               node.content = [result.css]
             })
