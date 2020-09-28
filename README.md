@@ -28,10 +28,11 @@ const postcssPlugins = []
 const postcssOptions = {}
 const filterType = /^text\/css$/
 
-const html = readFileSync('./index.html', 'utf8')
+const filePath = `${__dirname}/index.html`;
+const html = readFileSync(filePath, 'utf8')
 
 posthtml([ postcss(postcssPlugins, postcssOptions, filterType) ])
-    .process(html, { from: `${__dirname}/index.html` })
+    .process(html, { from: filePath })
     .then((result) => console.log(result.html))
 ```
 
