@@ -3,7 +3,9 @@
   "version": "0.3.0",
   "description": "PostHTML-PostCSS plugin. Use PostCSS in HTML document.",
   "main": "index.js",
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "npm run lint && npm run coverage",
     "lint": "eslint {test/*,*}.js",
@@ -50,7 +52,7 @@
     "posthtml": "^0.12.0"
   },
   "dependencies": {
-    "postcss": "^7.0.18"
+    "postcss": "^8.0.0"
   },
   "eslintConfig": {
     "env": {
