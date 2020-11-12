@@ -1,29 +1,29 @@
-var postcss = require('postcss')
+const postcss = require('postcss')
 
 module.exports = function (plugins, options, filterType) {
-  plugins = [].concat(plugins).filter(plugin => typeof plugin === 'function')
+  plugins = [].concat(plugins).filter(Boolean)
   options = options || {}
 
-  var css = postcss(plugins)
+  const css = postcss(plugins)
 
   return function posthtmlPostcss (tree) {
-    var promises = []
+    const promises = []
 
     tree.walk(function (node) {
-      var promise
+      let promise
 
       if (node.tag === 'style' && node.content) {
-        var meetsFilter = true
+        let meetsFilter = true
         if (filterType) {
-          var typeAttr = (node.attrs && node.attrs.type) ? node.attrs.type.trim() : ''
-          var meetsTypeAttr = filterType.test(typeAttr)
-          var meetsStandardType = filterType.test('text/css') && (meetsTypeAttr || typeAttr === '')
-          var meetsOtherType = !meetsStandardType && meetsTypeAttr
+          const typeAttr = (node.attrs && node.attrs.type) ? node.attrs.type.trim() : ''
+          const meetsTypeAttr = filterType.test(typeAttr)
+          const meetsStandardType = filterType.test('text/css') && (meetsTypeAttr || typeAttr === '')
+          const meetsOtherType = !meetsStandardType && meetsTypeAttr
           meetsFilter = meetsStandardType || meetsOtherType
         }
 
         if (meetsFilter) {
-          var styles = [].concat(node.content).join('')
+          const styles = [].concat(node.content).join('')
           promise = css.process(styles, options)
             .then(function (result) {
               node.content = [result.css]
