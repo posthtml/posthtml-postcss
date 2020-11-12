@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "test": "npm run lint && npm run coverage",
-    "lint": "eslint {test/*,*}.js",
+    "lint": "eslint {test/*,*}.js --fix",
     "coverage": "istanbul cover --report text --report html --report lcov node_modules/mocha/bin/_mocha",
     "preversion": "npm test",
     "postversion": "git push && git push --tags && rm -rf coverage"
@@ -39,17 +39,17 @@
   },
   "homepage": "https://github.com/posthtml/posthtml-postcss#readme",
   "devDependencies": {
-    "autoprefixer": "^9.6.5",
+    "autoprefixer": "^10.0.2",
     "chai": "^4.2.0",
-    "eslint": "^6.5.1",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint": "^7.13.0",
+    "eslint-config-standard": "^16.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-standard": "^4.1.0",
     "istanbul": "^0.4.0",
-    "mocha": "^6.2.2",
-    "posthtml": "^0.12.0"
+    "mocha": "^8.2.1",
+    "posthtml": "^0.13.4"
   },
   "dependencies": {
     "postcss": "^8.0.0"
