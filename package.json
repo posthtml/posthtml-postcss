@@ -1,22 +1,23 @@
 {
   "name": "posthtml-postcss",
-  "version": "0.3.0",
-  "description": "PostHTML-PostCSS plugin. Use PostCSS in HTML document.",
+  "version": "0.4.0",
+  "description": "PostHTML-PostCSS plugin. Use PostCSS in HTML document",
+  "license": "MIT",
+  "repository": "posthtml/posthtml-postcss",
+  "author": "Ivan Voischev <voischev.ivan@ya.ru>",
   "main": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "version": "conventional-changelog -i changelog.md -s -r 0 && git add changelog.md",
+    "test": "c8 mocha --timeout 5000",
+    "lint": "eslint {test/*,*}.js",
+    "pretest": "clinton"
+  },
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "npm run lint && npm run coverage",
-    "lint": "eslint {test/*,*}.js",
-    "coverage": "istanbul cover --report text --report html --report lcov node_modules/mocha/bin/_mocha",
-    "preversion": "npm test",
-    "postversion": "git push && git push --tags && rm -rf coverage"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/posthtml/posthtml-postcss.git"
-  },
   "keywords": [
     "posthtml",
     "postcss",
@@ -32,38 +33,21 @@
     "preprocessor",
     "parser"
   ],
-  "author": "Ivan Voischev <voischev.ivan@ya.ru>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/posthtml/posthtml-postcss/issues"
-  },
-  "homepage": "https://github.com/posthtml/posthtml-postcss#readme",
-  "devDependencies": {
-    "autoprefixer": "^9.6.5",
-    "chai": "^4.2.0",
-    "eslint": "^6.5.1",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "istanbul": "^0.4.0",
-    "mocha": "^6.2.2",
-    "posthtml": "^0.12.0"
-  },
   "dependencies": {
     "postcss": "^8.0.0"
   },
-  "eslintConfig": {
-    "env": {
-      "node": true,
-      "mocha": true
-    },
-    "plugins": [
-      "standard"
-    ],
-    "extends": [
-      "standard"
-    ]
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-angular": "^11.0.0",
+    "autoprefixer": "^10.0.2",
+    "c8": "^7.3.5",
+    "chai": "^4.2.0",
+    "clinton": "^0.14.0",
+    "conventional-changelog-cli": "^2.1.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "mocha": "^8.2.1",
+    "posthtml": "^0.13.4",
+    "xo": "^0.34.2"
   }
 }
