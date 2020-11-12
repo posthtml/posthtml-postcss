@@ -1,6 +1,6 @@
-var posthtml = require('posthtml')
-var css = require('..')
-var expect = require('chai').expect
+const posthtml = require('posthtml')
+const css = require('..')
+const expect = require('chai').expect
 
 function test (html, expected, postcssOptions, typeFilter, plugins, done) {
   Object.assign(postcssOptions, { from: undefined })
@@ -17,7 +17,7 @@ function test (html, expected, postcssOptions, typeFilter, plugins, done) {
 
 describe('use postcss', function () {
   it('object options', function () {
-    expect(function () { posthtml([css({})]) }).to.not.throw(Error)
+    expect(function () { posthtml([css({})]) }).to.throw(Error)
   })
 
   it('options', function () {
@@ -25,98 +25,98 @@ describe('use postcss', function () {
   })
 
   it('style tag', function (done) {
-    var html = '<style>a {display: flex;}</style>'
-    var expected = '<style>a {display: -ms-flexbox;display: flex;}</style>'
+    const html = '<style>a {display: flex;}</style>'
+    const expected = '<style>a {display: -ms-flexbox;display: flex;}</style>'
     test(html, expected, {}, null, null, done)
   })
 
   it('style tag empty', function (done) {
-    var html = '<style></style>'
-    var expected = '<style></style>'
+    const html = '<style></style>'
+    const expected = '<style></style>'
     test(html, expected, {}, null, null, done)
   })
 
   it('style attrs', function (done) {
-    var html = '<div style="display: flex;"></div>'
-    var expected = '<div style="display: -ms-flexbox;display: flex;"></div>'
+    const html = '<div style="display: flex;"></div>'
+    const expected = '<div style="display: -ms-flexbox;display: flex;"></div>'
     test(html, expected, {}, null, null, done)
   })
 
   it('style attrs empty', function (done) {
-    var html = '<div style></div>'
-    var expected = '<div style=""></div>'
+    const html = '<div style></div>'
+    const expected = '<div style=""></div>'
     test(html, expected, {}, null, null, done)
   })
 
   it('no style', function (done) {
-    var html = 'text <div></div>'
-    var expected = 'text <div></div>'
+    const html = 'text <div></div>'
+    const expected = 'text <div></div>'
     test(html, expected, {}, null, null, done)
   })
 
   it('filtered style tag with standard type', function (done) {
-    var html = '<style type="text/css">a {display: flex;}</style>'
-    var expected = '<style type="text/css">a {display: -ms-flexbox;display: flex;}</style>'
+    const html = '<style type="text/css">a {display: flex;}</style>'
+    const expected = '<style type="text/css">a {display: -ms-flexbox;display: flex;}</style>'
     test(html, expected, {}, /^text\/css$/, null, done)
   })
 
   it('filtered style tag with standard type (with spaces)', function (done) {
-    var html = '<style type=" text/css  ">a {display: flex;}</style>'
-    var expected = '<style type=" text/css  ">a {display: -ms-flexbox;display: flex;}</style>'
+    const html = '<style type=" text/css  ">a {display: flex;}</style>'
+    const expected = '<style type=" text/css  ">a {display: -ms-flexbox;display: flex;}</style>'
     test(html, expected, {}, /^text\/css$/, null, done)
   })
 
   it('filtered style tag with standard type (empty string)', function (done) {
-    var html = '<style type="">a {display: flex;}</style>'
-    var expected = '<style type="">a {display: -ms-flexbox;display: flex;}</style>'
+    const html = '<style type="">a {display: flex;}</style>'
+    const expected = '<style type="">a {display: -ms-flexbox;display: flex;}</style>'
     test(html, expected, {}, /^text\/css$/, null, done)
   })
 
   it('filtered style tag with standard type (one empty space)', function (done) {
-    var html = '<style type=" ">a {display: flex;}</style>'
-    var expected = '<style type=" ">a {display: -ms-flexbox;display: flex;}</style>'
+    const html = '<style type=" ">a {display: flex;}</style>'
+    const expected = '<style type=" ">a {display: -ms-flexbox;display: flex;}</style>'
     test(html, expected, {}, /^text\/css$/, null, done)
   })
 
   it('filtered style tag with standard type (two empty spaces)', function (done) {
-    var html = '<style type="  ">a {display: flex;}</style>'
-    var expected = '<style type="  ">a {display: -ms-flexbox;display: flex;}</style>'
+    const html = '<style type="  ">a {display: flex;}</style>'
+    const expected = '<style type="  ">a {display: -ms-flexbox;display: flex;}</style>'
     test(html, expected, {}, /^text\/css$/, null, done)
   })
 
   it('filtered style tag with non-standard type', function (done) {
-    var html = '<style type="text/other">a {display: flex;}</style>'
-    var expected = '<style type="text/other">a {display: -ms-flexbox;display: flex;}</style>'
+    const html = '<style type="text/other">a {display: flex;}</style>'
+    const expected = '<style type="text/other">a {display: -ms-flexbox;display: flex;}</style>'
     test(html, expected, {}, /^text\/other$/, null, done)
   })
 
   it('filtered out style tag with non-standard type', function (done) {
-    var html = '<style type="text/other">a {display: flex;}</style>'
-    var expected = html
+    const html = '<style type="text/other">a {display: flex;}</style>'
+    const expected = html
     test(html, expected, {}, /^text\/another$/, null, done)
   })
 
   it('style tag with newline and not indent', function (done) {
-    var html = 'text <style>\n.test { color: red; }</style>'
-    var expected = 'text <style>\n.test { color: red; }</style>'
+    const html = 'text <style>\n.test { color: red; }</style>'
+    const expected = 'text <style>\n.test { color: red; }</style>'
     test(html, expected, {}, null, null, done)
   })
 
   it('style tag with newline and multyply indent', function (done) {
-    var html = 'text <style>\n    .test {\n    color: red;\n}</style>'
-    var expected = 'text <style>\n    .test {\n    color: red;\n}</style>'
+    const html = 'text <style>\n    .test {\n    color: red;\n}</style>'
+    const expected = 'text <style>\n    .test {\n    color: red;\n}</style>'
     test(html, expected, {}, null, null, done)
   })
 
   it('style tag with newline and indent', function (done) {
-    var html = 'text <style>\n    .test { color: red; }</style>'
-    var expected = 'text <style>\n    .test { color: red; }</style>'
+    const html = 'text <style>\n    .test { color: red; }</style>'
+    const expected = 'text <style>\n    .test { color: red; }</style>'
     test(html, expected, {}, null, null, done)
   })
 
   it('style tag with newline and indent + plugin remove "\\n" character', function (done) {
-    var html = 'text <style>\n    .test { color: red; }</style>'
-    var expected = 'text <style>    .test { color: red; }</style>'
+    const html = 'text <style>\n    .test { color: red; }</style>'
+    const expected = 'text <style>    .test { color: red; }</style>'
 
     function plugin (root) {
       root.walk(function (node) {
