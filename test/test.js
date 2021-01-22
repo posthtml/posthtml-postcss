@@ -1,12 +1,12 @@
 const posthtml = require('posthtml');
 const css = require('..');
 const {expect} = require('chai');
-const autoprefixer = require('autoprefixer')({ overrideBrowserslist: ['ie >= 10'] });
+const autoprefixer = require('autoprefixer')({overrideBrowserslist: ['ie >= 10']});
 
 function test(html, expected, postcssOptions, typeFilter, plugins, done) {
   plugins = plugins || [autoprefixer];
   expect(posthtml([css(plugins, postcssOptions, typeFilter)])
-    .process(html, { from: 'test/test.js' })
+    .process(html, {from: 'test/test.js'})
     .then(result => {
       expect(expected).to.eql(result.html);
       done();
@@ -135,7 +135,7 @@ describe('use postcss', () => {
     const html = '<style>.test { color: red</style>';
 
     posthtml([css([autoprefixer])])
-      .process(html, { from: 'test/test.js' })
+      .process(html, {from: 'test/test.js'})
       .catch(error => {
         expect(error.message).to.include('test/test.js');
         done();
@@ -143,6 +143,8 @@ describe('use postcss', () => {
   });
 
   it('throws if PostCSS configuration is not found', () => {
-    expect(() => { posthtml([css()]) }).to.throw(Error);
-  })
-})
+    expect(() => {
+      posthtml([css()]);
+    }).to.throw(Error);
+  });
+});
