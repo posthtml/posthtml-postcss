@@ -12,7 +12,7 @@
   "scripts": {
     "version": "conventional-changelog -i changelog.md -s -r 0 && git add changelog.md",
     "test": "c8 mocha --timeout 5000",
-    "lint": "eslint {test/*,*}.js",
+    "lint": "xo",
     "pretest": "clinton"
   },
   "files": [
