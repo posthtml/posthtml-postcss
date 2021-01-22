@@ -1,6 +1,6 @@
 {
   "name": "posthtml-postcss",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "PostHTML-PostCSS plugin. Use PostCSS in HTML document",
   "license": "MIT",
   "repository": "posthtml/posthtml-postcss",

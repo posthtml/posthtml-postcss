@@ -1,5 +1,22 @@
+## 0.5.0 (2021-01-22)
+
+* build: fix linter pkg, close #38 ([19a53fe](https://github.com/posthtml/posthtml-postcss/commit/19a53fe)), closes [#38](https://github.com/posthtml/posthtml-postcss/issues/38)
+* build: rebuild ([a8a0b96](https://github.com/posthtml/posthtml-postcss/commit/a8a0b96))
+* style: lintafter change linter ([da2b0b5](https://github.com/posthtml/posthtml-postcss/commit/da2b0b5))
+* Match the indentation size in editorconfig ([8325e51](https://github.com/posthtml/posthtml-postcss/commit/8325e51))
+* Pass "from" option to PostCSS ([611661a](https://github.com/posthtml/posthtml-postcss/commit/611661a))
+* Update funding.yml ([a5398f4](https://github.com/posthtml/posthtml-postcss/commit/a5398f4))
+* docs: add filePath in example ([cfe8a96](https://github.com/posthtml/posthtml-postcss/commit/cfe8a96))
+
+
+
 ## 0.4.0 (2020-11-12)
 
+* 0.4.0 ([19491dd](https://github.com/posthtml/posthtml-postcss/commit/19491dd))
+* Bump acorn from 7.1.0 to 7.1.1 ([319168f](https://github.com/posthtml/posthtml-postcss/commit/319168f))
+* Bump handlebars from 4.0.11 to 4.7.3 ([3d173f2](https://github.com/posthtml/posthtml-postcss/commit/3d173f2))
+* Bump lodash from 4.17.15 to 4.17.19 ([62cca8d](https://github.com/posthtml/posthtml-postcss/commit/62cca8d))
+* postcss 8, webpack 5 compability ([a2bc127](https://github.com/posthtml/posthtml-postcss/commit/a2bc127))
 * test: fix after update autoprefixer ([3e9f3a6](https://github.com/posthtml/posthtml-postcss/commit/3e9f3a6))
 * test: set timeout ([32a0463](https://github.com/posthtml/posthtml-postcss/commit/32a0463))
 * test: style and fix after migration ([8a809e3](https://github.com/posthtml/posthtml-postcss/commit/8a809e3))
@@ -7,10 +24,6 @@
 * style: after lint ([b5414c1](https://github.com/posthtml/posthtml-postcss/commit/b5414c1))
 * build: recaftor build/lint/coverage system ([9173ab9](https://github.com/posthtml/posthtml-postcss/commit/9173ab9))
 * build: update dep dev ([f82c05b](https://github.com/posthtml/posthtml-postcss/commit/f82c05b))
-* Bump acorn from 7.1.0 to 7.1.1 ([319168f](https://github.com/posthtml/posthtml-postcss/commit/319168f))
-* Bump handlebars from 4.0.11 to 4.7.3 ([3d173f2](https://github.com/posthtml/posthtml-postcss/commit/3d173f2))
-* Bump lodash from 4.17.15 to 4.17.19 ([62cca8d](https://github.com/posthtml/posthtml-postcss/commit/62cca8d))
-* postcss 8, webpack 5 compability ([a2bc127](https://github.com/posthtml/posthtml-postcss/commit/a2bc127))
 * ci: drop support old node ([2feadf6](https://github.com/posthtml/posthtml-postcss/commit/2feadf6))
 * chore: update files notation ([03165f0](https://github.com/posthtml/posthtml-postcss/commit/03165f0))
 
