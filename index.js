@@ -1,11 +1,11 @@
 const postcss = require('postcss');
-const postcssrc = require('postcss-load-config')
+const postcssrc = require('postcss-load-config');
 
 module.exports = function (plugins, options, filterType) {
   if (arguments.length === 0) {
-    var rc = postcssrc.sync()
-    plugins = rc.plugins
-    options = rc.options
+    const rc = postcssrc.sync();
+    plugins = rc.plugins;
+    options = rc.options;
   }
 
   plugins = [].concat(plugins).filter(Boolean);
@@ -32,7 +32,7 @@ module.exports = function (plugins, options, filterType) {
         if (meetsFilter) {
           const styles = [].concat(node.content).join('');
           const from = options.from || tree.options.from;
-          promise = css.process(styles, Object.assign({}, options, { from: from }))
+          promise = css.process(styles, {...options, from})
             .then(result => {
               node.content = [result.css];
             });
