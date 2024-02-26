@@ -1,5 +1,6 @@
 ## 0.6.0 (2024-02-26)
 
+* 0.6.0 ([7715485](https://github.com/posthtml/posthtml-postcss/commit/7715485))
 * chore: add release script ([7981fdb](https://github.com/posthtml/posthtml-postcss/commit/7981fdb))
 * chore: update file name in package.json ([ba79577](https://github.com/posthtml/posthtml-postcss/commit/ba79577))
 * chore: update package.json ([685600c](https://github.com/posthtml/posthtml-postcss/commit/685600c))
