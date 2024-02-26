@@ -18,21 +18,28 @@ npm i -D posthtml-postcss
 ## Usage
 
 ```js
-const { readFileSync } = require('fs')
+import {dirname} from 'node:path'
+import {readFileSync} from 'node:fs'
+import {fileURLToPath} from 'node:url'
 
-const posthtml = require('posthtml')
-const postcss = require('posthtml-postcss')
+import posthtml from 'posthtml'
+import postcss from 'posthtml-postcss'
 
 const postcssPlugins = []
 const postcssOptions = {}
 const filterType = /^text\/css$/
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
 const filePath = `${__dirname}/index.html`
 const html = readFileSync(filePath, 'utf8')
 
-posthtml([ postcss(postcssPlugins, postcssOptions, filterType) ])
-    .process(html, { from: filePath })
-    .then((result) => console.log(result.html))
+posthtml([ 
+  postcss(postcssPlugins, postcssOptions, filterType) 
+])
+  .process(html, {from: filePath})
+  .then((result) => console.log(result.html))
 ```
 
 If you don't pass any arguments to `posthtml-postcss`, it will try to use your project's PostCSS configuration (see [`postcss-load-config`](https://www.npmjs.com/package/postcss-load-config)).
@@ -42,11 +49,12 @@ Notice that we're setting the option `from` when calling `process`. `posthtml-po
 ## Example
 
 ```js
-const posthtml = require('posthtml')
-const postcss = require('posthtml-postcss')
+import posthtml from 'posthtml'
+import postcss from 'posthtml-postcss'
+import autoprefixer from 'autoprefixer'
 
 const postcssPlugins = [
-  require('autoprefixer')({ browsers: ['last 2 versions'] })
+  autoprefixer({ browsers: ['last 2 versions'] })
 ]
 const postcssOptions = {}
 const filterType = /^text\/css$/
@@ -56,9 +64,11 @@ const html = `
   <div style="display: flex;">Text</div>
 `
 
-posthtml([ postcss(postcssPlugins, postcssOptions, filterType) ])
-    .process(html)
-    .then((result) => console.log(result.html))
+posthtml([ 
+  postcss(postcssPlugins, postcssOptions, filterType) 
+])
+  .process(html)
+  .then(result => console.log(result.html))
 ```
 
 Output:
