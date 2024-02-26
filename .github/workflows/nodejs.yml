@@ -1,39 +1,28 @@
-name: Actions Status
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: build
+
 on:
+  push:
+    branches: [master]
   pull_request:
-    types: [opened, synchronize]
-    branches:
-      - master
-env:
-  CI: true
 
 jobs:
-  run:
-    name: Node ${{ matrix.node }} on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
+  build:
+    runs-on: ubuntu-latest
 
     strategy:
-      fail-fast: false
       matrix:
-        node: [10, 12, 14]
-        os: [ubuntu-latest]
+        node-version: [16, 18, 20]
 
     steps:
-      - name: Clone repository
-        uses: actions/checkout@v2
-
-      - name: Set Node.js version
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
-
-      - name: Install npm dependencies
-        run: npm ci
-
-      - name: Run tests
-        run: npm run test
-
-      - name: Run Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm test
+        env:
+          CI: true
