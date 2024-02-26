@@ -1,3 +1,12 @@
+## 1.0.0 (2024-02-26)
+
+* chore: update changelog.md ([f51ed5d](https://github.com/posthtml/posthtml-postcss/commit/f51ed5d))
+* chore: update readme.md ([8f62b2d](https://github.com/posthtml/posthtml-postcss/commit/8f62b2d))
+* ci: update node versions in github workflow ([4f350b1](https://github.com/posthtml/posthtml-postcss/commit/4f350b1))
+* refactor: to esm ([74b3363](https://github.com/posthtml/posthtml-postcss/commit/74b3363))
+
+
+
 ## 0.6.0 (2024-02-26)
 
 * 0.6.0 ([7715485](https://github.com/posthtml/posthtml-postcss/commit/7715485))
