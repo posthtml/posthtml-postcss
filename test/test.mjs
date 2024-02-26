@@ -52,7 +52,7 @@ test('style attribute', () => {
   const html = '<div style="display: flex;"></div>'
   const expected = '<div style="display: -ms-flexbox;display: flex;"></div>'
 
-  process(html, expected, {}, null, null)
+  process(html, expected, {from: undefined}, null, null)
 })
 
 test('style attribute (empty)', () => {
