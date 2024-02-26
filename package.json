@@ -7,9 +7,10 @@
   "author": "Ivan Voischev <voischev.ivan@ya.ru>",
   "bugs": "https://github.com/posthtml/posthtml-postcss/issues",
   "homepage": "https://github.com/posthtml/posthtml-postcss",
-  "main": "lib/index.js",
+  "type": "module",
+  "exports": "./lib/index.js",
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "scripts": {
     "dev": "vitest",

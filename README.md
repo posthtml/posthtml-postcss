@@ -35,7 +35,7 @@ posthtml([ postcss(postcssPlugins, postcssOptions, filterType) ])
     .then((result) => console.log(result.html))
 ```
 
-If you don't pass arguments to `posthtml-postcss`, it will use your project's PostCSS configuration (see [`postcss-load-config`](https://www.npmjs.com/package/postcss-load-config)).
+If you don't pass any arguments to `posthtml-postcss`, it will try to use your project's PostCSS configuration (see [`postcss-load-config`](https://www.npmjs.com/package/postcss-load-config)).
 
 Notice that we're setting the option `from` when calling `process`. `posthtml-postcss` forwards this to PostCSS, which is useful for syntax error messages. (`postcss-cli` and `gulp-posthtml` are setting `from` automatically.)
 
