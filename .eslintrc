@@ -1,6 +1,7 @@
 {
   "parserOptions": {
-    "ecmaVersion": 2020
+    "ecmaVersion": 2020,
+    "sourceType": "module"
   },
   "rules": {
     "indent": [2, 2, {"SwitchCase": 1}],
