@@ -1,21 +1,23 @@
 {
   "name": "posthtml-postcss",
   "version": "0.5.0",
-  "description": "Use PostCSS in PostHTML",
+  "description": "Use PostCSS with PostHTML",
   "license": "MIT",
   "repository": "posthtml/posthtml-postcss",
   "author": "Ivan Voischev <voischev.ivan@ya.ru>",
+  "bugs": "https://github.com/posthtml/posthtml-postcss/issues",
+  "homepage": "https://github.com/posthtml/posthtml-postcss",
   "main": "lib/index.js",
   "engines": {
     "node": ">=16"
   },
   "scripts": {
     "dev": "vitest",
-    "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "test": "vitest run --coverage",
-    "lint": "eslint lib/*.{js,ts}",
+    "release": "np",
     "pretest": "npm run lint",
-    "release": "np"
+    "lint": "eslint lib/*.{js,ts}",
+    "test": "vitest run --coverage",
+    "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "files": [
     "lib"
