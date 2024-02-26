@@ -17,6 +17,7 @@
     "pretest": "npm run lint",
     "lint": "eslint lib/*.{js,ts}",
     "test": "vitest run --coverage",
+    "postrelease": "npm run version",
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "files": [
@@ -30,8 +31,6 @@
     "xml",
     "css",
     "processor",
-    "htmlnext",
-    "transforming",
     "transform",
     "manipulation",
     "preprocessor",
