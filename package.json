@@ -5,18 +5,18 @@
   "license": "MIT",
   "repository": "posthtml/posthtml-postcss",
   "author": "Ivan Voischev <voischev.ivan@ya.ru>",
-  "main": "index.js",
+  "main": "lib/index.js",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
     "version": "conventional-changelog -i changelog.md -s -r 0 && git add changelog.md",
     "test": "c8 mocha --timeout 5000",
-    "lint": "xo",
-    "pretest": "clinton"
+    "lint": "eslint lib/*.{js,ts}",
+    "pretest": "npm run lint"
   },
   "files": [
-    "index.js"
+    "lib/"
   ],
   "keywords": [
     "posthtml",
@@ -38,17 +38,12 @@
     "postcss-load-config": "^2.1.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-angular": "^11.0.0",
     "autoprefixer": "^10.0.2",
     "c8": "^7.3.5",
     "chai": "^4.2.0",
-    "clinton": "^0.14.0",
     "conventional-changelog-cli": "^2.1.1",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.5.1",
+    "eslint": "^7.32.0",
     "mocha": "^8.2.1",
-    "posthtml": "^0.13.4",
-    "xo": "^0.34.2"
+    "posthtml": "^0.13.4"
   }
 }
