@@ -14,7 +14,8 @@
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "test": "vitest run --coverage",
     "lint": "eslint lib/*.{js,ts}",
-    "pretest": "npm run lint"
+    "pretest": "npm run lint",
+    "release": "np"
   },
   "files": [
     "lib"
