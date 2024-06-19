@@ -1,5 +1,6 @@
 ## <small>1.0.1 (2024-06-19)</small>
 
+* 1.0.1 ([a2ea97c](https://github.com/posthtml/posthtml-postcss/commit/a2ea97c))
 * chore: update changelog.md ([6ad5a18](https://github.com/posthtml/posthtml-postcss/commit/6ad5a18))
 * build(deps-dev): bump @vitest/coverage-v8 from 1.3.1 to 1.4.0 ([e0f07e3](https://github.com/posthtml/posthtml-postcss/commit/e0f07e3))
 * build(deps-dev): bump @vitest/coverage-v8 from 1.4.0 to 1.5.0 ([45fa115](https://github.com/posthtml/posthtml-postcss/commit/45fa115))
