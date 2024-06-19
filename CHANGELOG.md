@@ -1,5 +1,6 @@
 ## 1.0.0 (2024-02-26)
 
+* 1.0.0 ([98e8623](https://github.com/posthtml/posthtml-postcss/commit/98e8623))
 * chore: update changelog.md ([f51ed5d](https://github.com/posthtml/posthtml-postcss/commit/f51ed5d))
 * chore: update readme.md ([8f62b2d](https://github.com/posthtml/posthtml-postcss/commit/8f62b2d))
 * ci: update node versions in github workflow ([4f350b1](https://github.com/posthtml/posthtml-postcss/commit/4f350b1))
