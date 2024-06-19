@@ -1,3 +1,20 @@
+## <small>1.0.1 (2024-06-19)</small>
+
+* chore: update changelog.md ([6ad5a18](https://github.com/posthtml/posthtml-postcss/commit/6ad5a18))
+* build(deps-dev): bump @vitest/coverage-v8 from 1.3.1 to 1.4.0 ([e0f07e3](https://github.com/posthtml/posthtml-postcss/commit/e0f07e3))
+* build(deps-dev): bump @vitest/coverage-v8 from 1.4.0 to 1.5.0 ([45fa115](https://github.com/posthtml/posthtml-postcss/commit/45fa115))
+* build(deps-dev): bump @vitest/coverage-v8 from 1.5.0 to 1.6.0 ([055d9b8](https://github.com/posthtml/posthtml-postcss/commit/055d9b8))
+* build(deps-dev): bump autoprefixer from 10.4.17 to 10.4.19 ([c353310](https://github.com/posthtml/posthtml-postcss/commit/c353310))
+* build(deps-dev): bump braces from 3.0.2 to 3.0.3 ([541c854](https://github.com/posthtml/posthtml-postcss/commit/541c854))
+* build(deps-dev): bump conventional-changelog-cli from 4.1.0 to 5.0.0 ([ea82295](https://github.com/posthtml/posthtml-postcss/commit/ea82295))
+* build(deps-dev): bump np from 10.0.0 to 10.0.3 ([53dc744](https://github.com/posthtml/posthtml-postcss/commit/53dc744))
+* build(deps-dev): bump np from 10.0.3 to 10.0.5 ([52a335f](https://github.com/posthtml/posthtml-postcss/commit/52a335f))
+* build(deps-dev): bump np from 9.2.0 to 10.0.0 ([11e03e4](https://github.com/posthtml/posthtml-postcss/commit/11e03e4))
+* build(deps-dev): bump vite from 5.1.4 to 5.2.8 ([fa0b0a5](https://github.com/posthtml/posthtml-postcss/commit/fa0b0a5))
+* build(deps): bump postcss-load-config from 5.0.3 to 6.0.1 ([3314ce9](https://github.com/posthtml/posthtml-postcss/commit/3314ce9))
+
+
+
 ## 1.0.0 (2024-02-26)
 
 * 1.0.0 ([98e8623](https://github.com/posthtml/posthtml-postcss/commit/98e8623))
