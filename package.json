@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "vitest",
-    "release": "np",
+    "release": "npx np",
     "pretest": "npm run lint",
     "lint": "eslint lib/*.{js,ts}",
     "test": "vitest run --coverage",
@@ -46,7 +46,6 @@
     "autoprefixer": "^10.4.17",
     "conventional-changelog-cli": "^5.0.0",
     "eslint": "^8.57.0",
-    "np": "^10.0.0",
     "posthtml": "^0.16.6",
     "vitest": "^2.0.2"
   }
