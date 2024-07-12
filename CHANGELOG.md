@@ -1,3 +1,15 @@
+## <small>1.0.2 (2024-07-12)</small>
+
+* ci: update node matrix ([cf8e460](https://github.com/posthtml/posthtml-postcss/commit/cf8e460))
+* refactor: use biome instead of eslint ([c8dbf8a](https://github.com/posthtml/posthtml-postcss/commit/c8dbf8a))
+* build(deps-dev): bump vitest and @vitest/coverage-v8 ([4331f24](https://github.com/posthtml/posthtml-postcss/commit/4331f24))
+* build(deps-dev): remove np ([943bd58](https://github.com/posthtml/posthtml-postcss/commit/943bd58))
+* build(deps-dev): update vitest and @vitest/coverage-v8 ([62daa7d](https://github.com/posthtml/posthtml-postcss/commit/62daa7d))
+* build(deps): bump postcss from 8.4.38 to 8.4.39 ([ab38430](https://github.com/posthtml/posthtml-postcss/commit/ab38430))
+* chore: update changelog.md ([e069ecf](https://github.com/posthtml/posthtml-postcss/commit/e069ecf))
+
+
+
 ## <small>1.0.1 (2024-06-19)</small>
 
 * 1.0.1 ([a2ea97c](https://github.com/posthtml/posthtml-postcss/commit/a2ea97c))
