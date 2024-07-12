@@ -16,7 +16,7 @@
     "dev": "vitest",
     "release": "npx np",
     "pretest": "npm run lint",
-    "lint": "eslint lib/*.{js,ts}",
+    "lint": "biome lint ./lib",
     "test": "vitest run --coverage",
     "postrelease": "npm run version",
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
@@ -42,10 +42,10 @@
     "postcss-load-config": "^6.0.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@vitest/coverage-v8": "^2.0.2",
     "autoprefixer": "^10.4.17",
     "conventional-changelog-cli": "^5.0.0",
-    "eslint": "^8.57.0",
     "posthtml": "^0.16.6",
     "vitest": "^2.0.2"
   }
