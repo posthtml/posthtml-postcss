@@ -1,5 +1,6 @@
 ## <small>1.0.2 (2024-07-12)</small>
 
+* 1.0.2 ([61eb046](https://github.com/posthtml/posthtml-postcss/commit/61eb046))
 * ci: update node matrix ([cf8e460](https://github.com/posthtml/posthtml-postcss/commit/cf8e460))
 * refactor: use biome instead of eslint ([c8dbf8a](https://github.com/posthtml/posthtml-postcss/commit/c8dbf8a))
 * build(deps-dev): bump vitest and @vitest/coverage-v8 ([4331f24](https://github.com/posthtml/posthtml-postcss/commit/4331f24))
