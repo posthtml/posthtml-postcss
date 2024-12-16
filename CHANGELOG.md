@@ -1,3 +1,15 @@
+## <small>1.0.3 (2024-12-16)</small>
+
+* build(deps-dev): bump @biomejs/biome from 1.8.3 to 1.9.3 ([3ffc705](https://github.com/posthtml/posthtml-postcss/commit/3ffc705))
+* build(deps-dev): bump @vitest/coverage-v8 from 2.0.2 to 2.1.8 ([480fb5e](https://github.com/posthtml/posthtml-postcss/commit/480fb5e))
+* build(deps-dev): bump autoprefixer from 10.4.19 to 10.4.20 ([f202601](https://github.com/posthtml/posthtml-postcss/commit/f202601))
+* build(deps): bump nanoid from 3.3.7 to 3.3.8 ([8bcb0bc](https://github.com/posthtml/posthtml-postcss/commit/8bcb0bc))
+* build(deps): bump postcss from 8.4.39 to 8.4.47 ([2689a04](https://github.com/posthtml/posthtml-postcss/commit/2689a04))
+* build(deps): bump vite from 5.3.3 to 5.4.11 ([405e6eb](https://github.com/posthtml/posthtml-postcss/commit/405e6eb))
+* chore: update changelog.md ([1e86313](https://github.com/posthtml/posthtml-postcss/commit/1e86313))
+
+
+
 ## <small>1.0.2 (2024-07-12)</small>
 
 * 1.0.2 ([61eb046](https://github.com/posthtml/posthtml-postcss/commit/61eb046))
