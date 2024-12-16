@@ -1,5 +1,6 @@
 ## <small>1.0.3 (2024-12-16)</small>
 
+* 1.0.3 ([cf4233b](https://github.com/posthtml/posthtml-postcss/commit/cf4233b))
 * build(deps-dev): bump @biomejs/biome from 1.8.3 to 1.9.3 ([3ffc705](https://github.com/posthtml/posthtml-postcss/commit/3ffc705))
 * build(deps-dev): bump @vitest/coverage-v8 from 2.0.2 to 2.1.8 ([480fb5e](https://github.com/posthtml/posthtml-postcss/commit/480fb5e))
 * build(deps-dev): bump autoprefixer from 10.4.19 to 10.4.20 ([f202601](https://github.com/posthtml/posthtml-postcss/commit/f202601))
