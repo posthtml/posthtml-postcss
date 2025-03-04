@@ -1,3 +1,15 @@
+## <small>1.0.4 (2025-03-04)</small>
+
+* fix: ensure node exists ([7b133aa](https://github.com/posthtml/posthtml-postcss/commit/7b133aa))
+* build(deps-dev): bump @biomejs/biome from 1.9.3 to 1.9.4 ([c4adfbf](https://github.com/posthtml/posthtml-postcss/commit/c4adfbf))
+* build(deps-dev): bump @vitest/coverage-v8 from 2.1.8 to 3.0.7 ([491ad00](https://github.com/posthtml/posthtml-postcss/commit/491ad00))
+* build(deps-dev): bump vitest from 2.1.8 to 3.0.7 ([c8a1c59](https://github.com/posthtml/posthtml-postcss/commit/c8a1c59))
+* build(deps): bump postcss from 8.4.47 to 8.5.3 ([8b440c1](https://github.com/posthtml/posthtml-postcss/commit/8b440c1))
+* build(deps): bump vite from 5.4.11 to 5.4.14 ([bf438bc](https://github.com/posthtml/posthtml-postcss/commit/bf438bc))
+* chore: update changelog.md ([e16bb4c](https://github.com/posthtml/posthtml-postcss/commit/e16bb4c))
+
+
+
 ## <small>1.0.3 (2024-12-16)</small>
 
 * 1.0.3 ([cf4233b](https://github.com/posthtml/posthtml-postcss/commit/cf4233b))
