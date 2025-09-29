@@ -1,3 +1,17 @@
+## <small>1.0.5 (2025-09-29)</small>
+
+* chore: update biome.json ([e21cd9e](https://github.com/posthtml/posthtml-postcss/commit/e21cd9e))
+* chore: update changelog.md ([8b25469](https://github.com/posthtml/posthtml-postcss/commit/8b25469))
+* chore: update deps ([5c612bc](https://github.com/posthtml/posthtml-postcss/commit/5c612bc))
+* build(deps-dev): bump @biomejs/biome from 1.9.4 to 2.2.4 ([221aad3](https://github.com/posthtml/posthtml-postcss/commit/221aad3))
+* build(deps-dev): bump @vitest/coverage-v8 from 3.0.7 to 3.2.4 ([40c61c6](https://github.com/posthtml/posthtml-postcss/commit/40c61c6))
+* build(deps-dev): bump autoprefixer from 10.4.20 to 10.4.21 ([8e10daf](https://github.com/posthtml/posthtml-postcss/commit/8e10daf))
+* build(deps): bump postcss from 8.5.3 to 8.5.6 ([10a44d9](https://github.com/posthtml/posthtml-postcss/commit/10a44d9))
+* build(deps): bump vite from 6.2.0 to 6.3.4 ([949b76d](https://github.com/posthtml/posthtml-postcss/commit/949b76d))
+* build(deps): bump vite from 7.0.4 to 7.1.5 ([8064836](https://github.com/posthtml/posthtml-postcss/commit/8064836))
+
+
+
 ## <small>1.0.4 (2025-03-04)</small>
 
 * 1.0.4 ([049dbc9](https://github.com/posthtml/posthtml-postcss/commit/049dbc9))
